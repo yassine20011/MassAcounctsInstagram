@@ -92,7 +92,7 @@ def start():
         '//*[@id="react-root"]/section/main/div/div/div[1]/div/div[6]/button')
     Click_button.click()
 # sending code..
-    from email_sms0 import sms
+    from email_sms import sms
 
 
     key1 = sms().key
@@ -112,7 +112,7 @@ def start():
     #plus_tard.click()
 # follow me 
 
-    from email_sms0 import bcolors
+    from email_sms import bcolors
 
     print(f"{bcolors.OKGREEN}",">>> Task successfuly Passed :)",f"    {bcolors.ENDC}")
 
