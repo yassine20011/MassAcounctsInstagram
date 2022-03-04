@@ -22,7 +22,6 @@ class Components:
     def __init__(self):
         pass
    
-    
     def get_email(self):
         url = "https://temp-mail44.p.rapidapi.com/api/v3/email/new"
         payload = "{\r\n    \"key1\": \"value\",\r\n    \"key2\": \"value\"\r\n}"

@@ -8,10 +8,10 @@ from components import Components
 import random
 from temp_mail import TemporaryGmail
 
-options = webdriver.ChromeOptions()
 
 ua = UserAgent()
 userAgent = ua.random
+options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 options.add_argument(f'user-agent={userAgent}')
 options.add_argument('user-data-dir=C:\\Users\\AMJAD\\AppData\\Local\\Google\\Chrome\\User Data\\Default')
@@ -27,9 +27,7 @@ username = components.generator_usernames()
 password = components.password()
 
 
-
 def login_form():
-
 
 	time.sleep(1)
 	find_element_email = browser.find_element_by_name('emailOrPhone')
@@ -71,10 +69,6 @@ def Birthday_form():
 
 	Click_button = browser.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/div[1]/div/div[6]/button')
 	Click_button.click()
-	
-
-
-
 
 def confirmation():
 	# sending code..
@@ -82,7 +76,7 @@ def confirmation():
 	while True:
 		if temporary_gmail.read(items["email"]) is not None:
 			code = temporary_gmail.read(items["email"])[:6]
-			print(code)
+			print("Confiramation code: ", code)
 			time.sleep(2)
 			code_of_confirmation = browser.find_element_by_name('email_confirmation_code')
 			code_of_confirmation.send_keys(code)
@@ -95,10 +89,9 @@ def confirmation():
 	from components import bcolors
 	print(f"{bcolors.OKGREEN}",">>> Task successfuly Passed :)",f"{bcolors.ENDC}")
 
-
-
 def start():
 	login_form()
 	Birthday_form()
 	confirmation()
+
 start()
