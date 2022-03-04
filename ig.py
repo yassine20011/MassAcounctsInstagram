@@ -38,8 +38,6 @@ def login_form():
 	with open("data.txt", "a") as log_in_info:
 		log_in_info.write("\nEmail : " + items["email"])
 
-
-
 		time.sleep(2)
 		fullname = browser.find_element_by_name('fullName')
 		fullname.send_keys(username)
