@@ -57,7 +57,7 @@ def login_form():
 
 
 
-def Birthday_form():
+def birthday_form():
 
 	time.sleep(2)
 	option_value = str(random.randint(1975, 2001))
