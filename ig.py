@@ -91,7 +91,7 @@ def confirmation():
 
 def start():
 	login_form()
-	Birthday_form()
+	birthday_form()
 	confirmation()
 
 start()
