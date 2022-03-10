@@ -12,7 +12,7 @@ Selenium is a portable framework for testing web applications. Selenium provides
 - Handling of Dynamic Web Elements
 
 ## Requirments
- Before start, you need to Install webdriver in your browser.
+ Before start, you need to Install webdriver.
 > Note: make sure you have the same version of your browser and WebDriver.
 
 
