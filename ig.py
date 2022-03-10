@@ -94,7 +94,10 @@ def start():
 	login_form()
 	birthday_form()
 	confirmation()
-	browser.close()
-	os.system('py ig.py')
+	for i in range(-30, 1):
+		print(f"Browser will be closed in {i * - 1} seconds", end='\r')
+		time.sleep(1)
+		browser.close()
+	
 
 start()
