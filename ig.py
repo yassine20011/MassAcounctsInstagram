@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import Select
 from components import Components
 import random
 from temp_mail import TemporaryGmail
-
+import os
 
 ua = UserAgent()
 userAgent = ua.random
@@ -22,7 +22,7 @@ print("Stating...\n")
 browser.delete_all_cookies()
 browser.get("https://instagram.com/accounts/emailsignup/")
 components = Components()
-items = components.get_email()
+email = components.get_email()
 username = components.generator_usernames()
 password = components.password()
 
@@ -31,10 +31,10 @@ def login_form():
 
 	time.sleep(1)
 	find_element_email = browser.find_element_by_name('emailOrPhone')
-	find_element_email.send_keys(items["email"])
+	find_element_email.send_keys(email["email"])
 
 	with open("data.txt", "a") as log_in_info:
-		log_in_info.write("\nEmail : " + items["email"])
+		log_in_info.write("\nEmail : " + email["email"])
 
 		time.sleep(2)
 		fullname = browser.find_element_by_name('fullName')
@@ -74,8 +74,8 @@ def confirmation():
 	# sending code..
 	temporary_gmail = TemporaryGmail()
 	while True:
-		if temporary_gmail.read(items["email"]) is not None:
-			code = temporary_gmail.read(items["email"])[:6]
+		if temporary_gmail.read(email["email"]) is not None:
+			code = temporary_gmail.read(email["email"])[:6]
 			print("Confiramation code: ", code)
 			time.sleep(2)
 			code_of_confirmation = browser.find_element_by_name('email_confirmation_code')
@@ -89,9 +89,12 @@ def confirmation():
 	from components import bcolors
 	print(f"{bcolors.OKGREEN}",">>> Task successfuly Passed :)",f"{bcolors.ENDC}")
 
+
 def start():
 	login_form()
 	birthday_form()
 	confirmation()
+	browser.close()
+	os.system('py ig.py')
 
 start()
