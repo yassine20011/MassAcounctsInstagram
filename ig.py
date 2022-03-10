@@ -1,5 +1,6 @@
 # Author : Yassine Amjad
 
+from itertools import count
 from selenium import webdriver
 from fake_useragent import UserAgent
 import time
@@ -73,14 +74,17 @@ def birthday_form():
 def confirmation():
 	# sending code..
 	temporary_gmail = TemporaryGmail()
+	count = 1
 	while True:
+		print(f"Waiting for confirmation code... Number of tries {count}", end="\r")
 		if temporary_gmail.read(email["email"]) is not None:
 			code = temporary_gmail.read(email["email"])[:6]
-			print("Confiramation code: ", code)
+			print("\nConfiramation code: ", code)
 			time.sleep(2)
 			code_of_confirmation = browser.find_element_by_name('email_confirmation_code')
 			code_of_confirmation.send_keys(code)
 			break
+		count += 1
 		continue
 
 	time.sleep(2)
@@ -94,10 +98,10 @@ def start():
 	login_form()
 	birthday_form()
 	confirmation()
-	for i in range(-30, 1):
+	for i in range(-60, 1):
 		print(f"Browser will be closed in {i * - 1} seconds", end='\r')
 		time.sleep(1)
-		browser.close()
+	browser.close()
 	
 
 start()

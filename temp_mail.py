@@ -18,6 +18,6 @@ class TemporaryGmail():
             'x-rapidapi-key': TOKEN
         }
         response = requests.request("GET", url_read, headers=headers)
-        sleep(15)
+        sleep(10)
         for response.json()[0]['subject'] in response.json():
             return response.json()[0]['subject']
