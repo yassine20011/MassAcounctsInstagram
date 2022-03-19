@@ -1,7 +1,6 @@
-import requests
+import requests, os
 from time import sleep
 from dotenv import load_dotenv
-import os
 
 load_dotenv()
 TOKEN = os.getenv('API_KEY')

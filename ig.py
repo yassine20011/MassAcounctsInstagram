@@ -1,14 +1,11 @@
 # Author : Yassine Amjad
 
-from itertools import count
 from selenium import webdriver
 from fake_useragent import UserAgent
-import time
+import time, random
 from selenium.webdriver.support.ui import Select
 from components import Components
-import random
 from temp_mail import TemporaryGmail
-import os
 
 ua = UserAgent()
 userAgent = ua.random
