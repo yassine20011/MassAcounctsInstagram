@@ -45,7 +45,7 @@ Go to this files `components.py` and `temp_mail.py` and change the variable `TOK
 
 And
 ```sh
-cd crispy-giggle | py ig.py
+cd crispy-giggle && py ig.py
 ```
 
 
