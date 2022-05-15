@@ -1,4 +1,4 @@
-## _How to create an account on Instagram using Python(Selenium)_
+## _Mass Acouncts instagram_
 
 ![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 
@@ -37,7 +37,7 @@ Go to this files `components.py` and `temp_mail.py` and change the variable `TOK
 
 And
 ```sh
-cd crispy-giggle | py ig.py
+cd crispy-giggle && py ig.py
 ```
 
 
