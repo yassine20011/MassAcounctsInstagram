@@ -22,14 +22,6 @@
 #   - Working
 #   - Tested on Windows 11 and Windows 10
 
-from components import bcolors
-print(f"{bcolors.OKGREEN}",">>> Instagram Register",f"{bcolors.ENDC}")
-print(f"{bcolors.OKGREEN}",">>> By Yassine Amjad",f"{bcolors.ENDC}")
-
-
-
-
-
 from selenium import webdriver
 from fake_useragent import UserAgent
 import time, random
