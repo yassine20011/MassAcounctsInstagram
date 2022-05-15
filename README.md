@@ -16,18 +16,10 @@ Selenium is a portable framework for testing web applications. Selenium provides
 > Note: make sure you have the same version of your browser and WebDriver.
 
 
-Install The tools.
+Install The requirements file.
 
 ```sh
-pip install selenium
-```
-
-```sh
-pip install bs4
-```
-
-```sh
-pip install fake-useragent
+pip install -r requirements.txt
 ```
 > PS: `Please let me know if you have any suggestions or ideas on how to improve the code! :)`
 

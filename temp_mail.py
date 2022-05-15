@@ -10,7 +10,8 @@ class TemporaryGmail():
     def __init__(self):
         pass
 
-    def read(sefl, email):
+    def read(self, email):
+        """ This function reads the email """
         url_read = f"https://temp-mail44.p.rapidapi.com/api/v3/email/{email}/messages"
         headers = {
             'x-rapidapi-host': "temp-mail44.p.rapidapi.com",
