@@ -21,7 +21,6 @@ Install The requirements file.
 ```sh
 pip install -r requirements.txt
 ```
-> PS: `Please let me know if you have any suggestions or ideas on how to improve the code! :)`
 
 ## How to use?
 
