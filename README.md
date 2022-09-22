@@ -38,7 +38,6 @@ And
 ```sh
 cd crispy-giggle && py ig.py
 ```
-![](https://i.imgur.com/uqz7SBg.gif)
 
 
 
